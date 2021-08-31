@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>Portfilio-CV</title>
 </head>
 
 <body>
@@ -41,43 +41,93 @@
   <section id="inicio" class="home">
     <article class="hero-image" style="--hero-image: url(assets/images/hero-image.png); --hero-attachment: fixed;">
       <aside class="hero-image-opacity" style="--hero-opacity-color: var(--primary-alpha-color);">
-        <div class="hero-image-content">
+        <div class="hero-image-content section">
           <img src="assets/images/emg.png" alt="Foto EMG">
           <h1 class="hero-image-title">Esther Manrique <br> González</h1>
           <h3 class="hero-image-subtitle">Front End Developer</h3>
           <a href="#contacto" class="btn">CONTÁCTAME</a>
         </div>
       </aside>
-
     </article>
 
   </section>
 
-  <section id="sobre-mi" class="about-me">
-    <h2>Sobre mi</h2>
+  <section id="sobre-mi" class="about-me full-lg-screen">
+    <article class="hero-image" style="--hero-image: url(assets/images/hero-image-1.jpg); --hero-attachment: fixed;">
+      <aside class="hero-image-opacity" style="--hero-opacity-color: var(--primary-alpha-color);">
+        <div class="hero-image-content section container">
+          <h2 class="section-title about-me-title">Sobre Mi</h2>
+          <P class="about-me-info">Soy apasionada por naturaleza propia, entre las cosas que más me gustan en la vida,
+            una de ellas es la programación, el diseño, desarrollo de software y páginas web.
+            Me encantan los retos, pero lo que más disfruto de ellos, es aprender cosas nuevas, que a su vez me lleva a
+            la busqueda y el logro de su correcta solución.
+            Me gusta perseguir mis sueños, lograr mis metas y pienso que no hay límites, sólo existen los que uno mismo
+            se impone...</P>
+          <a href="#" class="btn">DESCARGA MI CV</a>
+        </div>
+      </aside>
+    </article>
   </section>
 
-  <section id="habilidades-tecnicas" class="tech-skills">
-    <h2>Habilidades Técnicas</h2>
-  </section>
+  <section class="skills section container bg-gray-ligth">
+    <section id="habilidades-tecnicas" class="tech-skills">
+      <h2 class="section-title">Habilidades Técnicas</h2>
+      <div class="progress">
+        <p>
+          <b>HTML5</b> <b>90%</b>
+        </p>
+        <progress value="90" min="0" max="100"></progress>
+      </div>
+      <div class="progress">
+        <p>
+          <b>CSS3</b> <b>75%</b>
+        </p>
+        <progress value="75" min="0" max="100"></progress>
+      </div>
+      <div class="progress">
+        <p>
+          <b>Javascript</b> <b>50%</b>
+        </p>
+        <progress value="50" min="0" max="100"></progress>
+      </div>
+      <div class="progress">
+        <p>
+          <b>React Js</b> <b>50%</b>
+        </p>
+        <progress value="50" min="0" max="100"></progress>
+      </div>
+      <div class="progress">
+        <p>
+          <b>Vue Js</b> <b>35%</b>
+        </p>
+        <progress value="35" min="0" max="100"></progress>
+      </div>
+    </section>
 
-  <section id="habilidades-blandas" class="soft-skills">
-    <h2>Habilidades Blandas</h2>
+    <section id="habilidades-blandas" class="soft-skills">
+      <h2 class="section-title">Habilidades Blandas</h2>
+      <div class="progress">
+        <p>
+          <b>Vue Js</b> <b>35%</b>
+        </p>
+        <progress value="35" min="0" max="100"></progress>
+      </div>
+    </section>
   </section>
 
   <section id="portafolio" class="porfolio">
-    <h2>Proyectos</h2>
+    <h2 class="section-title">Proyectos</h2>
   </section>
 
   <section id="contacto" class="contact">
-    <h2>Contacto</h2>
+    <h2 class="section-title">Contacto</h2>
   </section>
 
   <footer class="footer">
     <small>Diseñado por <a href="https://esthermanrique.github.io/Portafolio_Esther_Manrique_2021/" target="_blank"
         rel="noopener">@esthermanrique</a></small>
   </footer>
-  
+
 
 
   <script src="script.js"></script>
