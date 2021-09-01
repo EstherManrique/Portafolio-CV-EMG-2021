@@ -321,6 +321,34 @@ progress::-moz-progress-value {
 }
 
 /* ******** Site Styles ******** */
+.contact-card {
+  width: 100%;
+  height: 144px;
+  margin: 1rem auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-card > svg {
+  width: 2rem;
+  height: 2rem;  
+}
+
+.contact-card > small {
+  margin-top: -1rem;
+}
+
+.footer {
+  margin-bottom: var(--header-height);
+  padding: 0.5rem;
+  text-align: center;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
 .header {
   position: fixed;
   left: 0;
@@ -432,6 +460,31 @@ progress::-moz-progress-value {
 } */
 
 @media screen and (min-width: 768px) {
+  .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    justify-content: space-between;
+  }
+
+  .contact-card {
+    width: 350px;
+    height: 250px;
+  }
+
+  .contact-card > svg {
+    width: 3rem;
+    height: 3rem;  
+  }
+
+  .contact-card > h5 {
+    font-size: 1.5rem;
+  }
+  
+  .contact-card > small {
+    font-size: 1.2rem;
+    margin-top: -2.5rem;
+  }
+
   .hero-image-content img {
     width: 85%;
     height: auto;
@@ -492,6 +545,29 @@ progress::-moz-progress-value {
 }
 
 @media screen and (min-width: 1024px) {
+  .contact-card {
+    width: 500px;
+    height: 250px;
+  }
+
+  .contact-card > svg {
+    width: 3rem;
+    height: 3rem;  
+  }
+
+  .contact-card > h5 {
+    font-size: 1.5rem;
+  }
+  
+  .contact-card > small {
+    font-size: 1.2rem;
+    margin-top: -2.5rem;
+  }
+
+  .footer {
+    margin-bottom: 0;
+  }
+
   .header {
     position: sticky;
     top:  0;
