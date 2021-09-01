@@ -87,8 +87,7 @@ p {
   line-height: 1.6;
 }
 
-/* ******** Components ******** */
-
+/* ************* Components ************* */
 /* ******** HeroImage ******** */
 .hero-image {
   background-image: var(--hero-image);
@@ -199,6 +198,45 @@ p {
   }
 }
 
+/* ******** Modal ******** */
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black-alpha-color);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.modal-close svg {
+  width: 3rem;
+  height: 3rem;
+  fill: red;
+}
+
+.modal[id|="proyecto"]:target {
+  opacity: 1;
+  pointer-events: auto;
+
+}
+
 /* ******** Progress Bar ******** */
 progress {
   width: 100%;
@@ -226,7 +264,7 @@ progress::-moz-progress-value {
   margin: 0;
   display: flex;
   justify-content: space-between;
-  font-size: .85rem;
+  font-size: 1rem;
 }
 
 
@@ -307,6 +345,92 @@ progress::-moz-progress-value {
   text-decoration: none;
 }
 
+.portfolio {
+  padding-top: 2rem;
+}
+
+.portfolio-card {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-card-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background-color: var(--primary-alpha-color);
+  color: var(--white-color);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.portfolio-card:hover .portfolio-card-info {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.portfolio-card-info > div {
+  padding: 1rem;
+  border: thin solid var(--white-color);
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-modal {
+  padding: 1rem;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-color);
+}
+
+.portfolio-modal h3 {
+  border-bottom: medium solid var(--third-color);
+  margin: 1rem auto;
+  padding: 0.5rem 0;
+  color: var(--title-color);
+}
+
+.portfolio-details {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-auto-rows: 2rem;
+}
+
+.portfolio-details b {
+  color: var(--third-color);
+}
+
+.soft-skills {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.soft-skills > div {
+  margin-bottom: 1.5rem;
+}
+
+.soft-skills svg {
+  width: 3.75rem;
+  height: auto;
+}
+
+/* .tech-skills {
+  margin-bottom: 3rem;
+} */
+
 @media screen and (min-width: 768px) {
   .hero-image-content img {
     width: 85%;
@@ -314,10 +438,57 @@ progress::-moz-progress-value {
     margin-bottom: 3rem;
   }
 
+  .hero-image-content .section-title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+
   .hero-image-content p {
+    font-size: 1.6rem;
+    padding: 0 5rem;
+    margin-bottom: 4rem;
+  }
+
+  .portfolio > .container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  .portfolio .section-title {
+    grid-column: span 2;
+  }
+
+  .portfolio-info {
+    margin-left: 1rem;
+    align-self: center;
+  }
+
+  .portfolio-modal {
+    max-width: 800px;
+    flex-direction: row;
+  }
+
+  .progress {
+    margin: 1.5rem auto;
+  }
+
+  .progress > p {
     font-size: 1.5rem;
   }
 
+  .skills {
+    padding: 2rem 5rem;
+    text-align: center;
+  }
+  
+  .soft-skills > div {
+    margin-bottom: 2rem;
+  }
+  
+  .soft-skills svg {
+    width: 5rem;
+    height: auto;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -328,10 +499,31 @@ progress::-moz-progress-value {
     height: calc(var(--header-height) - 0.5rem);
   }
 
+  .portfolio > .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .portfolio .section-title {
+    grid-column: span 3;
+  }
+  
+  .progress {
+    margin: 1rem auto;
+  }
+
   .skills {
     display: grid;
     grid-template-columns: repeat(2, 40%);
     justify-content: space-around;
     align-content: center;
+  }
+
+  .soft-skills {
+    text-align: center;
+    padding-top: 0;
+  }
+
+  .soft-skills > div {
+    margin-bottom: 4.8rem;
   }
 }
