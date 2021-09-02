@@ -172,6 +172,14 @@ p {
   background-color: var(--primary-color);
 }
 
+.only-mobile {
+  display: block;
+}
+
+.only-desktop {
+  display: none;
+}
+
 @media screen and (min-width: 1024px) {
   .menu-btn {
     display: none;
@@ -195,6 +203,14 @@ p {
 
   .menu a:hover {
     background-color: transparent;
+  }
+
+  .only-mobile {
+    display: none;
+  }
+  
+  .only-desktop {
+    display: block;
   }
 }
 
@@ -414,6 +430,10 @@ progress::-moz-progress-value {
   border: thin solid var(--white-color);
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .portfolio-modal {
@@ -516,10 +536,10 @@ progress::-moz-progress-value {
     align-self: center;
   }
 
-  .portfolio-modal {
+/*   .portfolio-modal {
     max-width: 800px;
     flex-direction: row;
-  }
+  } */
 
   .progress {
     margin: 1.5rem auto;
@@ -581,6 +601,11 @@ progress::-moz-progress-value {
 
   .portfolio .section-title {
     grid-column: span 3;
+  }
+
+  .portfolio-modal {
+    max-width: 800px;
+    flex-direction: row;
   }
   
   .progress {

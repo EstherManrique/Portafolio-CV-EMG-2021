@@ -25,6 +25,7 @@
 </head>
 
 <body>
+  <!-- Sección Menu -->
   <header class="header">
     <section class="container">
       <div class="logo">
@@ -42,13 +43,15 @@
       <nav class="menu">
         <a href="#inicio">Inicio</a>
         <a href="#sobre-mi">Sobre Mi</a>
-        <a href="#habilidades-tecnicas">Tech Skills</a>
-        <a href="#habilidades-blandas">Soft Skills</a>
+        <a href="#habilidades-tecnicas" class="only-mobile">Tech Skills</a>
+        <a href="#habilidades-blandas" class="only-mobile">Soft Skills</a>
+        <a href="#habilidades-tecnicas" class="only-desktop">Skills</a>
         <a href="#portafolio">Portafolio</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </section>
   </header>
+  <!-- Sección Inicio -->
   <section id="inicio" class="home">
     <article class="hero-image" style="--hero-image: url(assets/images/hero-image.png); --hero-attachment: fixed;">
       <aside class="hero-image-opacity" style="--hero-opacity-color: var(--primary-alpha-color);">
@@ -62,6 +65,7 @@
     </article>
 
   </section>
+  <!-- Sección Sobre mi -->
   <section id="sobre-mi" class="about-me full-lg-screen">
     <article class="hero-image" style="--hero-image: url(assets/images/hero-image-1.jpg); --hero-attachment: fixed;">
       <aside class="hero-image-opacity" style="--hero-opacity-color: var(--primary-alpha-color);">
@@ -78,6 +82,7 @@
       </aside>
     </article>
   </section>
+  <!-- Sección Skills -->
   <section id="habilidades-tecnicas" class="skills section bg-gray-ligth">
     <section class="tech-skills">
       <h2 class="section-title">Habilidades Técnicas</h2>
@@ -341,7 +346,7 @@
         <img src="assets/images/project-bqueen.jpg" alt="Proyecto 3">
         <aside class="portfolio-card-info">
           <div>
-            <h3>Portafolio EMG</h3>
+            <h3>Burger Queen</h3>
             <p>Aplicación diseñada para tablet (Ipad Pro) con el objetivo de facilitar la comunicación entre meseros,
               cocina y caja, optimizando tiempos para brindar un mejor servicio. La App tiene dos roles de usuario:
               Meseros y Cocina.</p>
@@ -373,7 +378,7 @@
         <aside class="portfolio-card-info">
           <div>
             <h3>Fashion Claus</h3>
-            <p>"E-Comerce, para la venta de ropa, Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora aut
+            <p>"E-Commerce, para la venta de ropa, Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora aut
               voluptatum quia nihil saepe nulla ea consequatur maxime, architecto dolores, necessitatibus sit non.
               Asperiores ea, aliquid repellat est quis tenetur?</p>
           </div>
@@ -381,7 +386,6 @@
       </a>
     </div>
   </section>
-
   <!-- Seccion Modales -->
   <section id="proyecto-1" class="modal">
     <div class="modal-content">
@@ -559,7 +563,7 @@
             <small><b>FECHA:</b></small>
             <small>Octubre, 2021</small>
             <small><b>TIPO:</b></small>
-            <small>E-Comerce</small>
+            <small>E-Commerce</small>
             <small><b>ENLACE:</b></small>
             <small><a href="https://esthermanrique.github.io/CDMX009-Social-Network/src/" target="_blank"
                 rel="noopener">https://fashionclaus.com.mx</a></small>
@@ -571,6 +575,7 @@
       </article>
     </div>
   </section>
+  <!-- Sección Contacto -->
   <section id="contacto" class="contact section">
     <div class="container">
       <h2 class="section-title">Contacto</h2>
@@ -606,11 +611,11 @@
       </article>
     </div>
   </section>
+  <!-- Sección Footer -->
   <footer class="footer">
     <small>Diseñado por <a href="https://esthermanrique.github.io/Portafolio_Esther_Manrique_2021/" target="_blank"
         rel="noopener">@esthermanrique</a></small>
   </footer>
   <script src="script.js"></script>
 </body>
-
 </html>
