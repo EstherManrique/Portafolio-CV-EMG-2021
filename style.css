@@ -382,12 +382,16 @@ progress::-moz-progress-value {
   align-items: center;
 }
 
-.logo a {
+.logo > a > img {
+  width: 2.5rem;
+}
+
+/* .logo a {
   color: var(--primary-color);
   font-weight: bold;
   font-size: 2rem;
   text-decoration: none;
-}
+} */
 
 .portfolio {
   padding-top: 2rem;
